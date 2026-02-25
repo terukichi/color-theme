@@ -1,10 +1,10 @@
-;;; outer-space-theme.el --- -*- lexical-binding: t -*-
+;;; outer-space-theme.el ---dark theme -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2026 terukichi
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 0.1.0
+;; Version: 0.2.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -16,28 +16,28 @@
 ;;; Code:
 
 (deftheme outer-space
-  "dark theme."
+  "dark theme for Emacs."
   :background-mode 'dark
   :kind 'color-scheme)
 
 (let ((class '((class color) (min-colors 89)))
       (bg-dfl "#181028")
-      (fg-dfl "#FFFFFF")
-      (csr "#aa0000")
-      (active "#a51aa5")
+      (fg-dfl "#E5E0E7")
+      (csr "#AA0030")
+      (active "#A51AA5")
       (inactive "#502050")
-      (cmnt "#726e77")
+      (lnk "#A3C3FE")
+      (cmnt "#625E77")
       (str "#D0BA1A")
-      (kywrd "#3a943d")
-      (blt "#BABFFa")
-      (fnc "#bd1a4b")
+      (kywrd "#3A943D")
+      (blt "#BABFFA")
+      (fnc "#BD1A4B")
       (vrb "#AA00BB")
-      (typ "#72c5da")
-      (cns "#AAAAAA")
-      (wrn "#AA00AA")
-      (prp "#00BBBB")
-      (ngt "#ff0000")
-      (hl-ln "#3E1010"))
+      (typ "#72C5DA")
+      (cns "#EA6C1A")
+      (prp "#3EA1EA")
+      (ngt "#FF0000")
+      (hl-ln "#302850"))
 
   (global-font-lock-mode t)
   (global-hl-line-mode t)
@@ -49,8 +49,8 @@
    `(cursor ((,class (:background ,csr))))
    `(mode-line-active ((,class (:background ,active))))
    `(mode-line-inactive ((,class (:background ,inactive))))
-   `(link ((,class (:foreground "#a3c3fe"))))
-   `(region ((,class (:background "#585068"))))
+   `(link ((,class (:foreground ,lnk :underline t))))
+   `(region ((,class (:background "#484058"))))
    `(highlight ((,class (:background "#585068"))))
    `(minibuffer-prompt ((,class :foreground ,blt)))
    
@@ -63,12 +63,34 @@
    `(font-lock-variable-name-face ((,class (:foreground ,vrb))))
    `(font-lock-type-face ((,class (:foreground ,typ))))
    `(font-lock-constant-face ((,class (:foreground ,cns))))
-   `(font-lock-warning-face ((,class (:foreground ,wrn))))
+   `(font-lock-warning-face ((,class (:foreground ,fnc))))
    `(font-lock-preprocessor-face ((,class (:foreground ,prp))))
    `(font-lock-negation-char-face ((,class (:foreground ,ngt))))
 
    ;; Hl-line
    `(hl-line ((,class (:background ,hl-ln))))
+
+   ;; Line Number
+   `(line-number ((,class (:background ,bg-dfl :foreground ,cmnt))))
+   `(line-number-current-line ((,class (:background ,hl-ln :foreground ,fg-dfl))))
+
+   ;; Which Function Mode
+   `(which-func ((,class (:foreground ,fg-dfl :underline t))))
+
+   ;; Org-mode
+   `(org-level-1 ((,class (:foreground "#D53AC5" :weight bold))))
+   `(org-level-2 ((,class (:foreground "#C5CA25" :weight bold))))
+   `(org-level-3 ((,class (:foreground "#15BAA5" :weight bold))))
+   `(org-level-4 ((,class (:foreground "#A55AD5" :weight bold))))
+   `(org-level-5 ((,class (:foreground "#A5DA55" :weight bold))))
+   `(org-level-6 ((,class (:foreground "#557AD5" :weight bold))))
+   `(org-level-7 ((,class (:foreground "#F58A25" :weight bold))))
+   `(org-level-8 ((,class (:foreground "#15AAF5" :weight bold))))
+   `(org-priority ((,class (:foreground ,active :weight normal))))
+   `(org-date ((,class (:foreground ,lnk :underline t))))
+   `(org-todo ((,class (:foreground ,active))))
+   `(org-done ((,class (:foreground ,inactive :strike-through t))))
+   `(org-headline-done ((,class (:inherit org-done))))
    ))
 
 ;;;###autoload
@@ -79,4 +101,4 @@
 
 (provide-theme 'outer-space)
 
-;;; outer-space-theme.el ends here
+;;; outer-space-theme.el ends here.
