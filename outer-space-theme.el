@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.0.0
+;; Version: 1.1.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -40,9 +40,6 @@
       (prp "#3EA1EA")
       (ngt "#FF0000")
       (hl-ln "#302850"))
-
-  (global-font-lock-mode t)
-  (global-hl-line-mode t)
 
   ;; Basic
   (custom-theme-set-faces
