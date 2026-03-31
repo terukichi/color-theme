@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.1.1
+;; Version: 1.1.2
 
 ;; This file is not part of GNU Emacs.
 
@@ -97,6 +97,7 @@
    `(org-done ((,class (:foreground ,inactive :strike-through t))))
    `(org-headline-done ((,class (:inherit org-done))))
    `(org-block ((,class (:background "#282038"))))
+   `(org-hide ((,class (:foreground ,bg-dflt))))
 
    ;; Org Agenda
    `(org-agenda-date ((,class (:foreground ,lnk))))
