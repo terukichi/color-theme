@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.1.2
+;; Version: 1.2.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -27,6 +27,8 @@
       (bg-csr "#AA0030")
       (active "#A51AA5")
       (inactive "#502050")
+      (txt-active "#E55AE5")
+      (txt-inactive "#703070")
       (lnk "#A3C3FE")
       (bg-rgn "#484058")
       (fg-cmnt "#625E77")
@@ -91,17 +93,19 @@
    `(org-level-6 ((,class (:foreground "#557AD5" :weight bold))))
    `(org-level-7 ((,class (:foreground "#F58A25" :weight bold))))
    `(org-level-8 ((,class (:foreground "#15AAF5" :weight bold))))
-   `(org-priority ((,class (:background "#382048" :foreground ,active :weight normal :slant italic))))
+   `(org-priority ((,class (:background "#382048" :foreground ,txt-active :weight normal :slant italic))))
    `(org-date ((,class (:foreground ,lnk :underline t))))
-   `(org-todo ((,class (:foreground ,active))))
-   `(org-done ((,class (:foreground ,inactive :strike-through t))))
+   `(org-todo ((,class (:foreground ,txt-active))))
+   `(org-done ((,class (:foreground ,txt-inactive :strike-through t))))
    `(org-headline-done ((,class (:inherit org-done))))
    `(org-block ((,class (:background "#282038"))))
    `(org-hide ((,class (:foreground ,bg-dflt))))
+   `(org-verbatim ((,class (:foreground ,fg-typ))))
+   `(org-code ((,class (:foreground ,fg-fnc))))
 
    ;; Org Agenda
    `(org-agenda-date ((,class (:foreground ,lnk))))
-   `(org-agenda-date-today ((,class (:foreground ,active :underline t))))
+   `(org-agenda-date-today ((,class (:foreground ,txt-active :underline t))))
    `(org-agenda-date-weekend ((,class (:foreground "#9E809E"))))
    `(org-time-grid ((,class (:foreground ,fg-cmnt))))
    ))
