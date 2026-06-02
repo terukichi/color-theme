@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.2.0
+;; Version: 1.3.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -48,7 +48,7 @@
    'outer-space
    `(default ((,class (:background ,bg-dflt :foreground ,fg-dflt))))
    `(cursor ((,class (:background ,bg-csr))))
-   `(mode-line ((,class (:distant-foreground ,bg-dflt))))
+   `(mode-line ((,class (:distant-foreground "#000000" :background ,active))))
    `(mode-line-active ((,class (:inherit mode-line :background ,active))))
    `(mode-line-inactive ((,class (:inherit mode-line :background ,inactive))))
    `(mode-line-buffer-id ((,class (:foreground ,fg-dflt :weight bold))))
