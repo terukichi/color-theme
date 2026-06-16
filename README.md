@@ -1,7 +1,7 @@
 # Color Theme for Emacs
 
 ## Outer Space
-Outer Space is a dark theme for Emacs.
+"Outer Space" is a dark theme for Emacs.
 
 ## Installation
 
