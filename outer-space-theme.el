@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.3.0
+;; Version: 1.3.1
 
 ;; This file is not part of GNU Emacs.
 
@@ -17,7 +17,7 @@
 
 ;;;###theme-autoload
 (deftheme outer-space
-  "dark theme for Emacs."
+  "Dark theme for Emacs."
   :background-mode 'dark
   :kind 'color-scheme)
 
