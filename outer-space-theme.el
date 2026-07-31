@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.3.1
+;; Version: 1.4.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -52,7 +52,7 @@
    `(mode-line-active ((,class (:inherit mode-line :background ,active))))
    `(mode-line-inactive ((,class (:inherit mode-line :background ,inactive))))
    `(mode-line-buffer-id ((,class (:foreground ,fg-dflt :weight bold))))
-   `(mode-line-highlight ((,class (:background ,lnk))))
+   `(mode-line-highlight ((t (:background "#A3C3FE" :box (:line-width (2 . 2) :color ,inactive :style pressed-button)))))
    `(link ((,class (:foreground ,lnk :underline t))))
    `(region ((,class (:background ,bg-rgn))))
    `(highlight ((,class (:background ,bg-rgn))))
@@ -60,6 +60,8 @@
    `(isearch ((,class (:background "#755AF5" :foreground ,bg-dflt))))
    `(isearch-fail ((,class (:background ,bg-rgn :foreground "#FF0000" :slant italic))))
    `(lazy-highlight ((,class (:background "#9E8AAF"))))
+   `(shadow ((,class (:foreground "#a090a0"))))
+   `(fringe ((,class (:background ,bg-dflt :foreground "DarkSeaGreen"))))
 
    ;; Syntax
    `(font-lock-comment-face ((,class (:foreground ,fg-cmnt :slant italic))))
@@ -107,14 +109,13 @@
    `(org-agenda-date ((,class (:foreground ,lnk))))
    `(org-agenda-date-today ((,class (:foreground ,txt-active :underline t))))
    `(org-agenda-date-weekend ((,class (:foreground "#9E809E"))))
-   `(org-time-grid ((,class (:foreground ,fg-cmnt))))
-   ))
+   `(org-time-grid ((,class (:foreground ,fg-cmnt)))))
 
-;; Org Priority
-(with-eval-after-load 'org
-  (setq org-priority-faces
-	    '((?A . (:inherit org-priority :weight bold :slant normal))
-	      (?B . (:inherit org-priority :weight normal :slant normal)))))
+  ;; Org Priority
+  (with-eval-after-load 'org
+    (setq org-priority-faces
+	      '((?A . (:inherit org-priority :weight bold :slant normal))
+	        (?B . (:inherit org-priority :weight normal :slant normal))))))
 
 ;;;###autoload
 (when load-file-name
