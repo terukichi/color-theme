@@ -4,7 +4,7 @@
 
 ;; Author: terukichi
 ;; URL: https://github.com/terukichi/color-theme
-;; Version: 1.4.0
+;; Version: 1.5.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -104,6 +104,9 @@
    `(org-hide ((,class (:foreground ,bg-dflt))))
    `(org-verbatim ((,class (:foreground ,fg-typ))))
    `(org-code ((,class (:foreground ,fg-fnc))))
+   `(org-block-begin-line ((,class (:foreground ,fg-cmnt :box (:line-width (1 . 2) :color ,inactive :style flat-button)))))
+   `(org-block-end-line ((,class (:inherit org-block-begin-line))))
+   `(org-table ((,class (:background "#282038" :foreground ,fg-dflt))))
 
    ;; Org Agenda
    `(org-agenda-date ((,class (:foreground ,lnk))))
