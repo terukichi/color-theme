@@ -1,4 +1,4 @@
-;;; outer-space-theme.el --- dark theme -*- lexical-binding: t; -*-
+;;; outer-space-nw-theme.el --- dark theme -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2026 terukichi
 
@@ -16,7 +16,7 @@
 ;;; Code:
 
 ;;;###theme-autoload
-(deftheme outer-space
+(deftheme outer-space-nw
   "Dark theme for Emacs."
   :background-mode 'dark
   :kind 'color-scheme)
@@ -45,8 +45,8 @@
 
   ;; Basic
   (custom-theme-set-faces
-   'outer-space
-   `(default ((,class (:background ,bg-dflt :foreground ,fg-dflt))))
+   'outer-space-nw
+   `(default ((,class (:foreground ,fg-dflt))))
    `(cursor ((,class (:background ,bg-csr))))
    `(mode-line ((,class (:distant-foreground "#000000" :background ,active))))
    `(mode-line-active ((,class (:inherit mode-line :background ,active))))
@@ -79,7 +79,7 @@
    `(hl-line ((,class (:background ,hl-ln))))
 
    ;; Line Number
-   `(line-number ((,class (:background ,bg-dflt :foreground ,fg-cmnt))))
+   `(line-number ((,class (:foreground ,fg-cmnt))))
    `(line-number-current-line ((,class (:background ,hl-ln :foreground ,fg-dflt))))
 
    ;; Which Function Mode
@@ -100,7 +100,7 @@
    `(org-done ((,class (:foreground ,txt-inactive :strike-through t))))
    `(org-headline-done ((,class (:inherit org-done))))
    `(org-block ((,class (:background "#282038"))))
-   `(org-hide ((,class (:foreground ,bg-dflt))))
+   `(org-hide ((,class (:foreground ,hl-ln))))
    `(org-verbatim ((,class (:foreground ,fg-typ))))
    `(org-code ((,class (:foreground ,fg-fnc))))
    `(org-block-end-line ((,class (:inherit org-block-begin-line))))
@@ -124,6 +124,6 @@
                (file-name-as-directory
                 (file-name-directory load-file-name))))
 
-(provide-theme 'outer-space)
+(provide-theme 'outer-space-nw)
 
-;;; outer-space-theme.el ends here
+;;; outer-space-nw-theme.el ends here

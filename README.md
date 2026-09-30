@@ -8,6 +8,8 @@
     ```emacs-lisp
     (add-to-list 'default-frame-alist '(alpha . 85))
     ```
+### [*Outer Space for CUI*](outer-space-nw-theme.el)
+- This is a color theme which isn't set default background color.
 
 ## Installation
 
@@ -27,4 +29,8 @@
    ```emacs-lisp
    (load-theme 'outer-space t)
    ```
-6. Restart Emacs.
+   or
+   ```emacs-lisp
+   (load-theme 'outer-space-nw t)
+   ```
+7. Restart Emacs.
