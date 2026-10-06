@@ -1,5 +1,7 @@
 # Color Theme for Emacs
 
+![MIT_License](https://img.shields.io/badge/License-MIT-green)
+
 ## Themes
 ### [*Outer Space*](outer-space-theme.el)
 - Outer Space is a dark theme for Emacs.
