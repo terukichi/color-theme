@@ -1,6 +1,17 @@
 # Color Theme for Emacs
 
-[![MIT_License](https://img.shields.io/badge/License-MIT-green)](https://img.shields.io/badges/)
+<div align="left">
+  <a href="https://img.shields.io/badges">
+    <img
+      alt="MIT_License"
+      src="https://img.shields.io/badge/License-MIT-green"
+      />
+    <img
+      alt="Language"
+      src="https://img.shields.io/badge/language-elisp-magenta"
+      />
+  </a>
+</div>
 
 ## Themes
 ### [*Outer Space*](outer-space-theme.el)
